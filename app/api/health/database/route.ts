@@ -9,7 +9,11 @@ export async function GET() {
     return NextResponse.json({ ok: true, database: "connected" });
   } catch {
     return NextResponse.json(
-      { ok: false, database: "unavailable", message: "Could not connect to MongoDB Atlas." },
+      {
+        ok: false,
+        database: "unavailable",
+        message: "Could not connect to MongoDB Atlas Connection.",
+      },
       { status: 503 },
     );
   }
